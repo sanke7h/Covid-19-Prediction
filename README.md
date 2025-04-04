@@ -94,91 +94,86 @@ Four classification models were trained and evaluated:
 
 ### Table: Training on all features (no feature selection)
 
-| Model | Validation Accuracy | Test Accuracy | Test Precision | Test Recall | Test F1 | Test AUC |
-|-------|---------------------|---------------|----------------|-------------|---------|----------|
-| LSVM | 0.8698 | 0.8690 | 0.8465 | 0.5815 | 0.6894 | N/A |
-| LogisticRegression | 0.8677 | 0.8669 | 0.8201 | 0.5991 | 0.6924 | 0.9034 |
-| GradientBoosting | 0.9599 | 0.9594 | 0.9591 | 0.8749 | 0.9151 | 0.9889 |
-| AdaBoost | 0.9296 | 0.9288 | 0.9156 | 0.7880 | 0.8470 | 0.9697 |
+| Model              | Test Accuracy | Test Precision | Test Recall | Test F1   |
+|--------------------|---------------|----------------|-------------|-----------|
+| LSVM               | 0.8671        | 0.8419         | 0.5768      | 0.6846    |
+| GradientBoosting   | 0.9569        | 0.9540         | 0.8697      | 0.9099    |
+| LogisticRegression | 0.8648        | 0.8150         | 0.5942      | 0.6873    |
+| AdaBoost           | 0.9051        | 0.8838         | 0.7145      | 0.7902    |
 
 ### Feature Selection Method Comparison
 
-### Table 1: Training on MIFS FS Subset
+#### Table 1: Training on MIFS FS Subset
 
-| Model | Validation Accuracy | Test Accuracy | Test Precision | Test Recall | Test F1 | Test AUC |
-|-------|---------------------|---------------|----------------|-------------|---------|----------|
-| LSVM | 0.8690 | 0.8678 | 0.8449 | 0.5773 | 0.6859 | N/A |
-| LogisticRegression | 0.8664 | 0.8655 | 0.8180 | 0.5944 | 0.6885 | 0.9005 |
-| GradientBoosting | 0.9608 | 0.9603 | 0.9585 | 0.8791 | 0.9171 | 0.9884 |
-| AdaBoost | 0.9258 | 0.9254 | 0.9082 | 0.7805 | 0.8395 | 0.9700 |
+| Model              | Test Accuracy | Test Precision | Test Recall | Test F1   |
+|--------------------|---------------|----------------|-------------|-----------|
+| LSVM               | 0.8647        | 0.8398         | 0.5668      | 0.6768    |
+| GradientBoosting   | 0.9596        | 0.9570         | 0.8776      | 0.9156    |
+| LogisticRegression | 0.8622        | 0.8113         | 0.5848      | 0.6797    |
+| AdaBoost           | 0.9051        | 0.8838         | 0.7145      | 0.7902    |
 
-### Table 2: Training on RFE FS Subset
+#### Table 2: Training on RFE FS Subset
 
-| Model | Validation Accuracy | Test Accuracy | Test Precision | Test Recall | Test F1 | Test AUC |
-|-------|---------------------|---------------|----------------|-------------|---------|----------|
-| LSVM | 0.8699 | 0.8687 | 0.8475 | 0.5790 | 0.6880 | N/A |
-| LogisticRegression | 0.8675 | 0.8663 | 0.8208 | 0.5950 | 0.6899 | 0.9017 |
-| GradientBoosting | 0.9595 | 0.9585 | 0.9525 | 0.8778 | 0.9136 | 0.9868 |
-| AdaBoost | 0.9305 | 0.9300 | 0.9147 | 0.7938 | 0.8500 | 0.9693 |
+| Model              | Test Accuracy | Test Precision | Test Recall | Test F1   |
+|--------------------|---------------|----------------|-------------|-----------|
+| LSVM               | 0.8245        | 0.8584         | 0.3569      | 0.5042    |
+| GradientBoosting   | 0.8544        | 0.8393         | 0.5163      | 0.6394    |
+| LogisticRegression | 0.8342        | 0.7829         | 0.4663      | 0.5845    |
+| AdaBoost           | 0.8414        | 0.8346         | 0.4560      | 0.5897    |
 
-### Table 3: Training on RidgeCV FS Subset
+#### Table 3: Training on RidgeCV FS Subset
 
-| Model | Validation Accuracy | Test Accuracy | Test Precision | Test Recall | Test F1 | Test AUC |
-|-------|---------------------|---------------|----------------|-------------|---------|----------|
-| LSVM | 0.8697 | 0.8685 | 0.8467 | 0.5788 | 0.6876 | N/A |
-| LogisticRegression | 0.8674 | 0.8664 | 0.8208 | 0.5957 | 0.6904 | 0.9011 |
-| GradientBoosting | 0.9605 | 0.9596 | 0.9541 | 0.8807 | 0.9160 | 0.9872 |
-| AdaBoost | 0.9302 | 0.9294 | 0.9129 | 0.7933 | 0.8490 | 0.9693 |
+| Model              | Test Accuracy | Test Precision | Test Recall | Test F1   |
+|--------------------|---------------|----------------|-------------|-----------|
+| LSVM               | 0.8648        | 0.8452         | 0.5624      | 0.6754    |
+| GradientBoosting   | 0.9599        | 0.9567         | 0.8794      | 0.9164    |
+| LogisticRegression | 0.8630        | 0.8182         | 0.5810      | 0.6795    |
+| AdaBoost           | 0.9102        | 0.8982         | 0.7226      | 0.8009    |
 
-### Table 1: Training on union of MIFS and RFE features
+#### Table 1: Training on union of MIFS and RFE features
 
-| Model | Validation Accuracy | Test Accuracy | Test Precision | Test Recall | Test F1 | Test AUC |
-|-------|---------------------|---------------|----------------|-------------|---------|----------|
-| LSVM | 0.8703 | 0.8691 | 0.8485 | 0.5798 | 0.6888 | N/A |
-| LogisticRegression | 0.8672 | 0.8662 | 0.8200 | 0.5954 | 0.6899 | 0.9024 |
-| GradientBoosting | 0.9581 | 0.9574 | 0.9579 | 0.8679 | 0.9107 | 0.9877 |
-| AdaBoost | 0.9296 | 0.9288 | 0.9156 | 0.7880 | 0.8470 | 0.9697 |
+| Model              | Test Accuracy | Test Precision | Test Recall | Test F1   |
+|--------------------|---------------|----------------|-------------|-----------|
+| LSVM               | 0.8666        | 0.8425         | 0.5737      | 0.6826    |
+| GradientBoosting   | 0.9601        | 0.9573         | 0.8795      | 0.9167    |
+| LogisticRegression | 0.8639        | 0.8143         | 0.5901      | 0.6843    |
+| AdaBoost           | 0.9051        | 0.8838         | 0.7145      | 0.7902    |
 
-### Table 2: Training on union of MIFS and RidgeCV features
+#### Table 2: Training on union of MIFS and RidgeCV features
 
-| Model | Validation Accuracy | Test Accuracy | Test Precision | Test Recall | Test F1 | Test AUC |
-|-------|---------------------|---------------|----------------|-------------|---------|----------|
-| LSVM | 0.8699 | 0.8686 | 0.8481 | 0.5780 | 0.6875 | N/A |
-| LogisticRegression | 0.8675 | 0.8662 | 0.8201 | 0.5955 | 0.6900 | 0.9016 |
-| GradientBoosting | 0.9600 | 0.9594 | 0.9592 | 0.8746 | 0.9150 | 0.9881 |
-| AdaBoost | 0.9296 | 0.9288 | 0.9156 | 0.7880 | 0.8470 | 0.9697 |
+| Model              | Test Accuracy | Test Precision | Test Recall | Test F1   |
+|--------------------|---------------|----------------|-------------|-----------|
+| LSVM               | 0.8649        | 0.8388         | 0.5691      | 0.6781    |
+| GradientBoosting   | 0.9591        | 0.9551         | 0.8775      | 0.9147    |
+| LogisticRegression | 0.8626        | 0.8102         | 0.5883      | 0.6817    |
+| AdaBoost           | 0.9051        | 0.8838         | 0.7145      | 0.7902    |
 
-### Table 3: Training on union of RFE and RidgeCV features
+#### Table 3: Training on union of RFE and RidgeCV features
 
-| Model | Validation Accuracy | Test Accuracy | Test Precision | Test Recall | Test F1 | Test AUC |
-|-------|---------------------|---------------|----------------|-------------|---------|----------|
-| LSVM | 0.8703 | 0.8689 | 0.8472 | 0.5804 | 0.6889 | N/A |
-| LogisticRegression | 0.8678 | 0.8668 | 0.8218 | 0.5964 | 0.6912 | 0.9019 |
-| GradientBoosting | 0.9595 | 0.9585 | 0.9525 | 0.8778 | 0.9136 | 0.9868 |
-| AdaBoost | 0.9305 | 0.9300 | 0.9147 | 0.7938 | 0.8500 | 0.9693 |
-
-
-
-
+| Model              | Test Accuracy | Test Precision | Test Recall | Test F1   |
+|--------------------|---------------|----------------|-------------|-----------|
+| LSVM               | 0.8667        | 0.8407         | 0.5761      | 0.6837    |
+| GradientBoosting   | 0.9600        | 0.9566         | 0.8799      | 0.9166    |
+| LogisticRegression | 0.8642        | 0.8128         | 0.5937      | 0.6862    |
+| AdaBoost           | 0.9051        | 0.8838         | 0.7145      | 0.7902    |
 
 ### Union Ensemble Feature Selection
 
-| Model | Test Accuracy | Test Precision | Test Recall | Test F1 | Test AUC |
-|-------|--------------|---------------|------------|---------|----------|
-| LSVM | 0.8691 | 0.8475 | 0.5810 | 0.6894 | N/A |
-| LogisticRegression | 0.8665 | 0.8206 | 0.5963 | 0.6907 | 0.9025 |
-| GradientBoosting | 0.9574 | 0.9579 | 0.8679 | 0.9107 | 0.9877 |
-| AdaBoost | 0.9288 | 0.9156 | 0.7880 | 0.8470 | 0.9697 |
+| Model              | Test Accuracy | Test Precision | Test Recall | Test F1   |
+|--------------------|---------------|----------------|-------------|-----------|
+| LSVM               | 0.8667        | 0.8407         | 0.5761      | 0.6837    |
+| GradientBoosting   | 0.9600        | 0.9566         | 0.8799      | 0.9166    |
+| LogisticRegression | 0.8642        | 0.8128         | 0.5937      | 0.6862    |
+| AdaBoost           | 0.9051        | 0.8838         | 0.7145      | 0.7902    |
 
 ### PCA Feature Extraction (15 components)
 
-| Model | Test Accuracy | Test Precision | Test Recall | Test F1 | Test AUC |
-|-------|--------------|---------------|------------|---------|----------|
-| LSVM | 0.8476 | 0.8132 | 0.5067 | 0.6244 | N/A |
-| LogisticRegression | 0.8499 | 0.7929 | 0.5410 | 0.6432 | 0.8851 |
-| GradientBoosting | 0.8652 | 0.8409 | 0.5683 | 0.6783 | 0.8989 |
-| AdaBoost | 0.8558 | 0.7970 | 0.5678 | 0.6632 | 0.8870 |
-
+| Model              | Test Accuracy | Test Precision | Test Recall | Test F1   |
+|--------------------|---------------|----------------|-------------|-----------|
+| LSVM               | 0.8455        | 0.8106         | 0.4984      | 0.6172    |
+| GradientBoosting   | 0.8632        | 0.8426         | 0.5567      | 0.6705    |
+| LogisticRegression | 0.8465        | 0.7854         | 0.5311      | 0.6337    |
+| AdaBoost           | 0.8500        | 0.7810         | 0.5562      | 0.6497    |
 ## Key Findings
 
 1. **Gradient Boosting** consistently performed best across all feature subsets, achieving over 95% accuracy and F1 scores above 0.91.
